@@ -15,7 +15,7 @@ namespace bytebankAdm.Funcionarios
 
         public double getBonificacao()
         {
-            return Salario * 0.1;  
+            return Salario;  
         }
     }
 }
