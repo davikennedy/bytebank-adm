@@ -11,7 +11,6 @@ namespace bytebankAdm.Funcionarios
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public double Salario { get; set; }
-        private int _tipo;
 
         public double getBonificacao()
         {
