@@ -16,5 +16,10 @@ namespace bytebankAdm.Funcionarios
         {
             return Salario * 0.1;
         }
+
+        public virtual double getPremioSemestral()
+        {
+            return Salario * 0.2;
+        }
     }
 }

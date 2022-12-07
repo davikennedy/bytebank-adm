@@ -10,7 +10,12 @@ namespace bytebankAdm.Funcionarios
     {
         public override double getBonificacao()
         {
-            return Salario;  
+            return Salario + base.getBonificacao();
+        }
+
+        public override double getPremioSemestral()
+        {
+            return Salario + base.getPremioSemestral();
         }
     }
 }
