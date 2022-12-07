@@ -15,12 +15,14 @@ d1.Nome = "Paula";
 d1.Cpf = "012.345.678-90";
 d1.Salario = 5000;
 
-Funcionario f2 = new Diretor();
-
-/*Console.WriteLine($"Nome: {d1.Nome}");
+Console.WriteLine($"Nome: {d1.Nome}");
 Console.WriteLine($"CPF: {d1.Cpf}");
 Console.WriteLine($"Salário: {d1.Salario:C}");
-Console.WriteLine($"Bonificação: {d1.getBonificacao():C}\n");*/
+Console.WriteLine($"Bonificação: {d1.getBonificacao():C}\n");
+
+Funcionario f2 = new Diretor();
+
+
 
 gerenciador.Registrar(f1);
 gerenciador.Registrar(d1);
