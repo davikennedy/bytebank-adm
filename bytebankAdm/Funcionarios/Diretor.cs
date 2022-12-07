@@ -17,5 +17,7 @@ namespace bytebankAdm.Funcionarios
         {
             return Salario + base.getPremioSemestral();
         }
+
+        public Diretor(string Cpf) : base(Cpf) { }
     }
 }
