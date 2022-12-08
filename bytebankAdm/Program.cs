@@ -5,24 +5,41 @@ Console.WriteLine("Boas vindas ao Bytebank Administração!\n");
 
 GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
 
-Funcionario f1 = new Funcionario("039.745.842-63");
+Funcionario f1 = new Funcionario("039.745.842-63", 2000);
 f1.Nome = "João";
-f1.Salario = 2000;
 
-Diretor d1 = new Diretor("012.345.678-90");
+Funcionario f2 = new Diretor("987.654.321-01", 10000);
+f2.Nome = "Maria";
+
+Diretor d1 = new Diretor("012.345.678-90", 5000);
 d1.Nome = "Paula";
-d1.Salario = 5000;
+
+Console.WriteLine($"Nome: {f1.Nome}");
+Console.WriteLine($"Salário: {f1.Salario:C}");
+Console.WriteLine($"Bonificação: {f1.getBonificacao():C}\n");
+
+Console.WriteLine($"Nome: {f2.Nome}");
+Console.WriteLine($"Salário: {f2.Salario:C}");
+Console.WriteLine($"Bonificação: {f2.getBonificacao():C}\n");
 
 Console.WriteLine($"Nome: {d1.Nome}");
-Console.WriteLine($"CPF: {d1.Cpf}");
 Console.WriteLine($"Salário: {d1.Salario:C}");
 Console.WriteLine($"Bonificação: {d1.getBonificacao():C}\n");
 
-Funcionario f2 = new Diretor("987.654.321-01");
-
 gerenciador.Registrar(f1);
+gerenciador.Registrar(f2);
 gerenciador.Registrar(d1);
-Console.WriteLine($"Total de bonificação: {gerenciador.getBonificacao():C}");
 
+Console.WriteLine($"Total de bonificação: {gerenciador.getBonificacao():C}");
+Console.WriteLine($"Total de funcionarios: {Funcionario.TotalFuncionarios}");
+
+f1.aumentarSalario();
+Console.WriteLine($"Novo salário do {f1.Nome}: {f1.Salario:C}");
+
+f2.aumentarSalario();
+Console.WriteLine($"Novo salário do {f2.Nome}: {f2.Salario:C}");
+
+d1.aumentarSalario();
+Console.WriteLine($"Novo salário do {d1.Nome}: {d1.Salario:C}");
 
 Console.ReadKey();

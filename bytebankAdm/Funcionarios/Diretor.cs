@@ -18,6 +18,14 @@ namespace bytebankAdm.Funcionarios
             return Salario + base.getPremioSemestral();
         }
 
-        public Diretor(string Cpf) : base(Cpf) { }
+        public override double aumentarSalario()
+        {
+            return Salario *= 1.15;
+        }
+
+        public Diretor(string Cpf, double Salario) : base(Cpf, Salario) 
+        {
+
+        }
     }
 }
