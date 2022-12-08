@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace bytebankAdm.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Designer : Funcionario
     {
         public override double getBonificacao()
         {
-            return Salario * 0.5;
+            return Salario * 0.17;
         }
 
         public override double getPremioSemestral()
@@ -20,10 +20,10 @@ namespace bytebankAdm.Funcionarios
 
         public override double aumentarSalario()
         {
-            return Salario *= 1.15;
+            return Salario *= 1.11;
         }
 
-        public Diretor(string Cpf) : base(Cpf, 5000) 
+        public Designer(string Cpf) : base(Cpf, 3000) 
         {
 
         }

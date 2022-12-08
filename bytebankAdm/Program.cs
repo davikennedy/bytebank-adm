@@ -3,7 +3,32 @@ using bytebankAdm.Utilitarios;
 
 Console.WriteLine("Boas vindas ao Bytebank Administração!\n");
 
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+CalcularBonificacao();
+void CalcularBonificacao()
+{
+    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+
+    Designer pedro = new Designer("039.745.842-63");
+    pedro.Nome = "Pedro";
+
+    Diretor paula = new Diretor("012.345.678-90");
+    paula.Nome = "Paula";
+
+    Auxiliar igor = new Auxiliar("987.654.321-01");
+    igor.Nome = "Igor";
+
+    GerenteDeContas camila = new GerenteDeContas("326.985.628.89");
+    camila.Nome = "Camila";
+
+    gerenciador.Registrar(pedro);
+    gerenciador.Registrar(paula);
+    gerenciador.Registrar(igor);
+    gerenciador.Registrar(camila);
+
+    Console.WriteLine($"Total de bonificação: {gerenciador.getBonificacao():C}");
+}
+
+/*GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
 
 Funcionario f1 = new Funcionario("039.745.842-63", 2000);
 f1.Nome = "João";
@@ -40,6 +65,6 @@ f2.aumentarSalario();
 Console.WriteLine($"Novo salário do {f2.Nome}: {f2.Salario:C}");
 
 d1.aumentarSalario();
-Console.WriteLine($"Novo salário do {d1.Nome}: {d1.Salario:C}");
+Console.WriteLine($"Novo salário do {d1.Nome}: {d1.Salario:C}");*/
 
 Console.ReadKey();
