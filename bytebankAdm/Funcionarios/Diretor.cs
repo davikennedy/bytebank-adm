@@ -8,6 +8,11 @@ namespace bytebankAdm.Funcionarios
 {
     public class Diretor : Funcionario
     {
+        public string Senha { get; set; }
+        public bool Autenticar(string Senha)
+        {
+            return this.Senha == Senha;
+        }
         public override double GetBonificacao()
         {
             return Salario * 0.5;
