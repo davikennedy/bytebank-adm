@@ -10,9 +10,10 @@ namespace bytebankAdm.SistemaInterno
     public abstract class Autenticavel : Funcionario
     {        
         public string Senha { get; set; }
-        public bool Autenticar(string Senha)
+        public string Login { get; set; }
+        public bool Autenticar(string Login, string Senha)
         {
-            return this.Senha == Senha;
+            return this.Senha == Senha && this.Login == Login;
         }
 
         public Autenticavel(string Cpf, double Salario) : base(Cpf, Salario)

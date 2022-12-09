@@ -40,14 +40,16 @@ void UsarSistema()
 
     Diretor roberta = new Diretor("159.753.398-04");
     roberta.Nome = "Roberta";
+    roberta.Login = roberta.Cpf;
     roberta.Senha = "123";
 
     GerenteDeContas marcelo = new GerenteDeContas("326.985.628-89");
     marcelo.Nome = "Marcelo";
+    marcelo.Login = marcelo.Cpf;
     marcelo.Senha = "321";
 
-    sistemaInterno.Logar(roberta, "123");
-    sistemaInterno.Logar(marcelo, "321");
+    sistemaInterno.Logar(roberta, roberta.Login, roberta.Senha);
+    sistemaInterno.Logar(marcelo, marcelo.Login, "543");
 }
 
 Console.ReadKey();
