@@ -8,17 +8,17 @@ namespace bytebankAdm.Funcionarios
 {
     public class Designer : Funcionario
     {
-        public override double getBonificacao()
+        public override double GetBonificacao()
         {
             return Salario * 0.17;
         }
 
-        public override double getPremioSemestral()
+        public override double GetPremioSemestral()
         {
-            return Salario + base.getPremioSemestral();
+            return Salario + base.GetPremioSemestral();
         }
 
-        public override double aumentarSalario()
+        public override double AumentarSalario()
         {
             return Salario *= 1.11;
         }

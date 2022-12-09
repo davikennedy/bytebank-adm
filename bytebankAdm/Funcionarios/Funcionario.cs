@@ -12,9 +12,9 @@ namespace bytebankAdm.Funcionarios
         public string Cpf { get; private set; }
         public double Salario { get; protected set; }
 
-        public abstract double getBonificacao();
-        public abstract double aumentarSalario();
-        public virtual double getPremioSemestral()
+        public abstract double GetBonificacao();
+        public abstract double AumentarSalario();
+        public virtual double GetPremioSemestral()
         {
             return Salario * 0.2;
         }

@@ -29,7 +29,7 @@ void CalcularBonificacao()
     gerenciador.Registrar(igor);
     gerenciador.Registrar(camila);
 
-    Console.WriteLine($"Total de bonificação: {gerenciador.getBonificacao():C}");
+    Console.WriteLine($"Total de bonificação: {gerenciador.GetBonificacao():C}");
 }
 
 /*GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();

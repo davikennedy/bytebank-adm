@@ -8,17 +8,22 @@ namespace bytebankAdm.Funcionarios
 {
     public class GerenteDeContas : Funcionario
     {
-        public override double getBonificacao()
+        public string Senha { get; set; }
+        public bool Autenticar(string Senha)
+        {
+            return this.Senha == Senha;
+        }
+        public override double GetBonificacao()
         {
             return Salario * 0.25;
         }
 
-        public override double getPremioSemestral()
+        public override double GetPremioSemestral()
         {
-            return Salario + base.getPremioSemestral();
+            return Salario + base.GetPremioSemestral();
         }
 
-        public override double aumentarSalario()
+        public override double AumentarSalario()
         {
             return Salario *= 1.05;
         }
