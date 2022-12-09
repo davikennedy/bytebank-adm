@@ -11,6 +11,9 @@ void CalcularBonificacao()
     Designer pedro = new Designer("039.745.842-63");
     pedro.Nome = "Pedro";
 
+    Desenvolvedor manuela = new Desenvolvedor("483.025.191-90");
+    manuela.Nome = "Manuela";
+
     Diretor paula = new Diretor("012.345.678-90");
     paula.Nome = "Paula";
 
@@ -21,6 +24,7 @@ void CalcularBonificacao()
     camila.Nome = "Camila";
 
     gerenciador.Registrar(pedro);
+    gerenciador.Registrar(manuela);
     gerenciador.Registrar(paula);
     gerenciador.Registrar(igor);
     gerenciador.Registrar(camila);
