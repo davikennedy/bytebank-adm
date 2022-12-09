@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace bytebankAdm.Funcionarios
 {
-    public class GerenteDeContas : Autenticavel
+    public class GerenteDeContas : FuncionarioAutenticavel
     {
 
         public override double GetBonificacao()

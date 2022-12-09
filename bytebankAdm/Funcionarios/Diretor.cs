@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace bytebankAdm.Funcionarios
 {
-    public class Diretor : Autenticavel
-    {
+    public class Diretor : FuncionarioAutenticavel
+    { 
         public override double GetBonificacao()
         {
             return Salario * 0.5;
