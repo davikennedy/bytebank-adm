@@ -9,6 +9,7 @@ namespace bytebankAdm.Funcionarios
 {
     public class GerenteDeContas : Autenticavel
     {
+
         public override double GetBonificacao()
         {
             return Salario * 0.25;
